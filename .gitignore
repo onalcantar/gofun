@@ -1,2 +1,2 @@
-.idx/dev.nix
-# i want to ignore the dev.nix file inside the .idx forlder
+*.idx/dev.nix
+.vscode

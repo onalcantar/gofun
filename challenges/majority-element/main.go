@@ -1,17 +1,15 @@
 package main
 
 func majorityElement(nums []int) int {
-    var rptts = make(map[int]int)
-	for _, num := range nums {
-		rptts[num]++;
-	}
+    rptts := make(map[int]int)
+    n := len(nums)
 
-	k, h := 0, 0
-	for num, rptt := range rptts {
-		if rptt > h {
-			h, k = rptt, num
-		}
-	}
+    for _, num := range nums {
+        rptts[num]++
+        if rptts[num] > n / 2 {
+            return num
+        }
+    }
 
-	return k
+    return -1
 }

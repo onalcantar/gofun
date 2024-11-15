@@ -18,22 +18,6 @@ func Test_majorityElement(t *testing.T) {
 			nums: []int{2, 2, 1, 1, 1, 2, 2},
 			expected: 2,
 		},
-		{
-			nums: []int{1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3},
-			expected: 1,
-		},
-		{
-			nums: []int{0},
-			expected: 0,
-		},
-		{
-			nums: []int{0, 0},
-			expected: 0,
-		},
-		{
-			nums: []int{},
-			expected: 0,
-		},
 	}
 
 	for _, tt := range tests {

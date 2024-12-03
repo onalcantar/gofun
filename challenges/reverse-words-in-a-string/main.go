@@ -5,12 +5,11 @@ import "strings"
 func reverseWords(s string) string {
     words := strings.Fields(s)
 
-	start := 0
-	end := len(words) -1
-	for start < end {
-		words[start], words[end] = words[end], words[start]
-		start++
-		end--
+	left, right := 0, len(words) -1
+	for left < right {
+		words[left], words[right] = words[right], words[left]
+		left++
+		right--
 	}
 
 	return strings.Join(words, " ")
